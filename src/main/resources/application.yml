@@ -1,0 +1,36 @@
+#logging:
+#  config:logback.xml
+#  level:
+#    cn.jay.repository: trace
+
+logging:
+
+#  config: logback.xml
+  #配置日志位置
+  #配置日志输出格式
+#  pattern:
+#    console: '%d{HH:mm:ss.SSS} %-5level %logger{36} [%line] - %msg%n'
+  level:
+    com.king.api: debug
+    org.springframework.web: debug
+  file:
+    name: F:/SoftwareInstall/IDEA/ideaIU-2019.3.5.win/api-seed/logs/global.log
+
+devtools:
+  #热加载生效
+  spring.devtools.restart.enabled: true
+  #额外新增的热加载目录
+  spring.devtools.restart.additional-paths: src/main/java
+  #热加载排除目录
+  #spring.devtools.restart.exclude=
+
+
+spring:
+#  application: api-seed
+#    name: api-seed
+  aop:
+    proxy-target-class: true
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    mode: LEGACYHTML5
